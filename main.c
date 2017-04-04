@@ -12,6 +12,13 @@
 typedef void* PVOID;
 typedef char* PCHAR;
 
+int sayHello() {
+  
+  debug("Goodbye!");
+  
+  return 3;
+}
+
 int main(void) {
    
   debug("Start...")
@@ -31,6 +38,8 @@ int main(void) {
       debug("Running fn")
       int status = 0;
       status = fn();
+      debug("returned %d", status);
+      status = sayHello();
       debug("returned %d", status);
     }
 
